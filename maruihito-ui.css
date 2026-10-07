@@ -1,0 +1,92 @@
+
+/* MARUIHITO UI OVERDRIVE */
+:root{--mh-green:#b9ff66;--mh-yellow:#ffe66d;--mh-pink:#ff82b2;--mh-blue:#7ee7ff;--mh-ink:#11131a}
+body{
+  background:
+    radial-gradient(circle at 15% 10%,rgba(126,231,255,.12),transparent 25%),
+    radial-gradient(circle at 85% 85%,rgba(255,130,178,.10),transparent 24%),
+    #080a0f!important;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.14;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.08) 4px);
+}
+.wrap{max-width:620px!important;padding:18px 14px 44px!important}
+.card{
+  position:relative;overflow:hidden;
+  border:2px solid rgba(255,255,255,.88)!important;
+  border-radius:6px!important;
+  background:linear-gradient(180deg,rgba(20,23,32,.97),rgba(9,11,16,.98))!important;
+  box-shadow:8px 8px 0 rgba(185,255,102,.18),0 24px 80px rgba(0,0,0,.45)!important;
+}
+.card:before{
+  content:"MARUIHITO OS / PRIVATE ACCESS";
+  display:block;margin:-1px -1px 24px;padding:7px 10px;
+  background:#f4f4ee;color:#111;font:800 10px/1 monospace;letter-spacing:1.4px;text-align:left;
+}
+.card:after{
+  content:"● REC  •  AUS NODE  •  BBOOPPA NETWORK";
+  position:absolute;right:12px;top:8px;color:#111;font:800 8px/1 monospace;letter-spacing:.5px;
+}
+.title{
+  font-family:Impact,"Arial Black",sans-serif!important;
+  font-size:clamp(44px,12vw,76px)!important;line-height:.85!important;
+  letter-spacing:-2px!important;text-transform:uppercase;
+  text-shadow:3px 3px 0 rgba(255,130,178,.45),-2px -2px 0 rgba(126,231,255,.35);
+}
+.ey{
+  display:inline-block!important;padding:5px 8px!important;
+  border:1px solid currentColor;border-radius:2px;
+  font-family:monospace!important;font-weight:900!important;letter-spacing:1.5px!important;
+}
+.big{font-weight:900!important;letter-spacing:-.6px}
+.sub{line-height:1.8!important}
+.ticket{
+  transform:rotate(-.7deg);
+  border:2px dashed rgba(255,255,255,.7)!important;
+  box-shadow:4px 5px 0 rgba(126,231,255,.18);
+}
+.air:before{content:"✦ ";color:var(--mh-yellow)}
+.code{font-family:Impact,"Arial Black",sans-serif!important;letter-spacing:1px!important}
+.btn{
+  position:relative;border:2px solid #f4f4ee!important;border-radius:3px!important;
+  background:var(--mh-green)!important;color:#0a0c0f!important;
+  box-shadow:4px 4px 0 #f4f4ee!important;
+  font-weight:950!important;text-transform:none;
+  transition:transform .08s,box-shadow .08s!important;
+}
+.btn:active{transform:translate(4px,4px)!important;box-shadow:0 0 0 #fff!important}
+.btn.alt{background:#171a23!important;color:#f5f5f0!important;box-shadow:4px 4px 0 rgba(126,231,255,.7)!important}
+.log{
+  border:1px solid rgba(185,255,102,.5)!important;
+  background:#050805!important;color:#b9ff66!important;
+  font-family:"Courier New",monospace!important;
+  box-shadow:inset 0 0 30px rgba(185,255,102,.04);
+}
+.log:before{content:"ROOT@MARUIHITO:~$ ./install_australia.sh";display:block;color:#fff;margin-bottom:12px}
+.prog{border:1px solid #fff!important;border-radius:0!important;background:#050608!important}
+.bar{background:repeating-linear-gradient(90deg,var(--mh-green) 0 12px,#050608 12px 15px)!important}
+.timeline{border-left:2px dashed var(--mh-blue)!important}
+.era{position:relative!important;border:1px solid rgba(255,255,255,.16)!important;background:rgba(255,255,255,.035)!important;margin-bottom:12px!important}
+.era:before{content:"+";position:absolute;left:-25px;top:12px;width:17px;height:17px;background:var(--mh-blue);color:#081016;text-align:center;font:bold 14px/17px monospace}
+.photo{
+  border:8px solid #efefe9!important;border-bottom-width:34px!important;border-radius:2px!important;
+  transform:rotate(-.6deg);box-shadow:7px 9px 0 rgba(255,130,178,.2)!important;
+}
+.cap{
+  margin-top:18px!important;padding:12px!important;border-left:4px solid var(--mh-yellow);
+  background:rgba(255,230,109,.07);font-family:monospace!important;
+}
+.grid img:nth-child(3n+1){transform:rotate(-3deg)}
+.grid img:nth-child(3n+2){transform:rotate(2deg)}
+.grid img:nth-child(3n){transform:rotate(-1deg)}
+.letter{
+  position:relative;background:#f0eee4!important;color:#151515!important;
+  border-radius:2px!important;box-shadow:8px 8px 0 rgba(255,130,178,.22)!important;
+  font-family:"Courier New",monospace!important;
+}
+.letter:before{content:"DO NOT PARSE / HUMAN DATA";display:block;border-bottom:1px dashed #777;padding-bottom:9px;margin-bottom:18px;font:bold 10px monospace;letter-spacing:1px}
+@media(max-width:520px){
+ .card{padding:22px 18px!important}.card:after{display:none}.title{font-size:52px!important}
+ .route{gap:8px!important}.code{font-size:25px!important}.photo{border-width:6px!important;border-bottom-width:28px!important}
+}
