@@ -25,11 +25,11 @@
   };
 
   verify=function(){
-    S('<div class="card"><div class="ey">01 · IDENTITY CHECK</div><div class="big">MARUIHITO 본인 확인</div><p class="sub">연락 확인 주기: 예측 불가<br>모든 사람에게 공평하게 답장이 느림<br>예외 계정: 일본인 남자친구<br><br>위 특성이 본인과 일치합니까?</p><button class="btn" onclick="test()">놀랍게도 일치함</button><button class="btn alt" onclick="alert(\'거짓말 감지. 뿌빠 데이터베이스는 이미 알고 있습니다.\')">나는 연락 잘 보는데?</button></div>');
+    S('<div class="card"><div class="ey">01 · IDENTITY CHECK</div><div class="big">MARUIHITO 본인 확인</div><p class="sub">연락 확인 주기: 예측 불가<br>모든 사람에게 공평하게 답장이 느림<br>예외 계정: 코짱<br><br>위 특성이 본인과 일치합니까?</p><button class="btn" onclick="test()">놀랍게도 일치함</button><button class="btn alt" onclick="alert(\'거짓말 감지. 뿌빠 데이터베이스는 이미 알고 있습니다.\')">나는 연락 잘 보는데?</button></div>');
   };
 
   test=function(){
-    S('<div class="card"><div class="ey">02 · PRE-DEPARTURE DIAGNOSTIC</div><div class="big">호주 런타임 사전 점검</div><p class="sub">Q. 출국까지 비자가 안 나와 한참을 기다렸다. 이제 진짜 떠날 수 있게 됐다. 가장 먼저 활성화할 모드는?</p><button class="btn alt" onclick="ans(1)">일단 가서 살아본다. 경험치는 현지에서 쌓는다</button><button class="btn alt" onclick="ans(0)">모든 미래를 완벽히 정한 뒤 움직인다</button><button class="btn alt" onclick="ans(1)">남자친구도 만나고 새로운 것도 해보고, 나머지는 그다음 생각한다</button></div>');
+    S('<div class="card"><div class="ey">02 · PRE-DEPARTURE DIAGNOSTIC</div><div class="big">호주 런타임 사전 점검</div><p class="sub">Q. 비자도 드디어 나왔다. 이제 호주에서의 다음 챕터를 실행해야 한다. MARUIHITO의 실제 실행 명령은?</p><button class="btn alt" onclick="ans(0)">취업·귀국일·진로까지 1년치 계획표를 먼저 완성한다</button><button class="btn alt" onclick="ans(1)">코짱도 만나고, 새로운 경험도 잔뜩 해본다. 진로는 직접 부딪혀본 다음의 내가 결정한다</button><button class="btn alt" onclick="ans(0)">낯선 건 위험하니까 한국에서 하던 것만 최대한 그대로 반복한다</button></div>');
   };
 
   ans=function(ok){
@@ -37,7 +37,7 @@
   };
 
   stats=function(){
-    S('<div class="card"><div class="ey">03 · MARUIHITO PROFILE</div><div class="big">현재 사용자 상태</div>'+st("낯선 곳에서 살아볼 실행력",97)+st("외모 버프",99)+st("잼얘 수집 능력",96)+st("친구 연락 확인 속도",12)+st("남자친구 연락 확인 속도",100)+st("아직 정해지지 않은 미래의 가능성",100)+'<p class="tiny">※ 마지막 항목은 측정 불가로 MAX 처리. 귀국 후 취준 모듈은 아직 설치하지 않습니다.</p><button class="btn" onclick="install()">Australia Runtime 설치</button></div>');
+    S('<div class="card"><div class="ey">03 · MARUIHITO PROFILE</div><div class="big">현재 사용자 상태</div>'+st("낯선 곳에서 살아볼 실행력",97)+st("미모 버프",99)+st("잼얘 수집 능력",96)+st("친구 연락 확인 속도",12)+st("코짱 연락 확인 속도",100)+st("아직 정해지지 않은 미래의 가능성",100)+'<p class="tiny">※ 마지막 항목은 측정 불가로 MAX 처리. 귀국 후 취준 모듈은 아직 설치하지 않습니다.</p><button class="btn" onclick="install()">Australia Runtime 설치</button></div>');
   };
 
   install=function(){
@@ -47,7 +47,7 @@
       "visa_waiting_loop.exe 종료... FINALLY",
       "호주 교환학생 경험치 불러오기... FOUND",
       "일본어과 잔존 데이터... まだ生きてる",
-      "남자친구 로컬 연결... PRIORITY CHANNEL",
+      "코짱 로컬 연결... PRIORITY CHANNEL",
       "새로운 경험 자동수집... ENABLED",
       "진로 결정 강제 실행... SKIPPED",
       "귀국 후 취준 모듈... 예약만 해둠",
@@ -56,10 +56,10 @@
     ];
     var ib=document.getElementById("ib"),pc=document.getElementById("pc"),lg=document.getElementById("lg");
     var q=setInterval(function(){
-      p=Math.min(100,p+4); ib.style.width=p+"%"; pc.innerHTML=p+"%";
+      p=Math.min(100,p+2); ib.style.width=p+"%"; pc.innerHTML=p+"%";
       if(i<L.length && p>=8+i*10){lg.innerHTML+="<div>&gt; "+L[i++]+"</div>";lg.scrollTop=lg.scrollHeight}
-      if(p===100){clearInterval(q);setTimeout(err,1100)}
-    },260);
+      if(p===100){clearInterval(q);setTimeout(err,1600)}
+    },320);
   };
 
   err=function(){
