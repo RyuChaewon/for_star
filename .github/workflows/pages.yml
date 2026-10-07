@@ -23,17 +23,18 @@ jobs:
         run: |
           mkdir _site
           cp index.html _site/
-          cp maruihito-patch.js _site/maruihito-patch-v6.js
-          cp maruihito-ui.css _site/maruihito-ui-v6.css
+          cp maruihito-patch.js _site/maruihito-patch-v7.js
+          cp maruihito-ui.css _site/maruihito-ui-v7.css
+          cp maruihito-pwa.js manifest.webmanifest sw.js _site/
           python3 - <<'PY'
           from pathlib import Path
           import re
           p = Path("_site/index.html")
           s = p.read_text(encoding="utf-8")
           s = re.sub(r'<title>.*?</title>', '', s, count=1, flags=re.I|re.S)
-          meta = '<title>MARUIHITO.exe</title><meta name="description" content="PRIVATE BUILD · USER: KIM YEBYEOL · 실행 권장"><meta property="og:title" content="MARUIHITO.exe"><meta property="og:description" content="PRIVATE BUILD · USER: KIM YEBYEOL · 실행 권장"><meta property="og:type" content="website"><meta property="og:url" content="https://ryuchaewon.github.io/for_star/"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="maruihito-ui-v6.css">'
+          meta = '<title>MARUIHITO.exe</title><meta name="description" content="PRIVATE BUILD · USER: KIM YEBYEOL · 실행 권장"><meta property="og:title" content="MARUIHITO.exe"><meta property="og:description" content="PRIVATE BUILD · USER: KIM YEBYEOL · 실행 권장"><meta property="og:type" content="website"><meta property="og:url" content="https://ryuchaewon.github.io/for_star/"><meta name="theme-color" content="#b9ff66"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MARUIHITO"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="maruihito-ui-v7.css">'
           s = s.replace("</head>", meta + "</head>")
-          s = s.replace("</body>", '<script src="maruihito-patch-v6.js"></script></body>')
+          s = s.replace("</body>", '<script src="maruihito-patch-v7.js"></script><script src="maruihito-pwa.js"></script></body>')
           p.write_text(s, encoding="utf-8")
           PY
       - uses: actions/upload-pages-artifact@v3
