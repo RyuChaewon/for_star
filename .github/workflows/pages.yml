@@ -22,11 +22,12 @@ jobs:
       - name: Build gift site
         run: |
           mkdir _site
-          cp index.html maruihito-patch.js _site/
+          cp index.html maruihito-patch.js maruihito-ui.css _site/
           python3 - <<'PY'
           from pathlib import Path
           p = Path("_site/index.html")
           s = p.read_text(encoding="utf-8")
+          s = s.replace("</head>", '<link rel="stylesheet" href="maruihito-ui.css"></head>')
           s = s.replace("</body>", '<script src="maruihito-patch.js"></script></body>')
           p.write_text(s, encoding="utf-8")
           PY
