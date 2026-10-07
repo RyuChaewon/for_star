@@ -1,0 +1,11 @@
+{
+  "name":"MARUIHITO.exe",
+  "short_name":"MARUIHITO",
+  "description":"PRIVATE BUILD · USER: KIM YEBYEOL",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#080a0f",
+  "theme_color":"#b9ff66",
+  "orientation":"portrait-primary"
+}
